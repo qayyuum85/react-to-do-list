@@ -46,7 +46,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+            .get("https://jsonplaceholder.typicode.com/todos?_limit=10", {crossdomain: true})
             .then((response) => {
                 setTodos(response.data);
             })
